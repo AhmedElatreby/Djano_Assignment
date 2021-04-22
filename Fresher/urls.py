@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 from . import views
 
-app_name="blog"
+app_name="Fresher"
 
 urlpatterns = [
     path('', views.home, name="homepage"),

@@ -8,7 +8,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to="images/", default="images/default.png")
 
     def get_absolute_url(self):
-        return reverse("blog:single", args=[self.slug])
+        return reverse("Fresher:single", args=[self.slug])
     
 
     def __str__(self):
