@@ -12,3 +12,5 @@ def single(request, slug):
 
 def aboutus(request):
     return render(request, "aboutus.html", {})
+
+    
