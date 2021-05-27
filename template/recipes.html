@@ -3,19 +3,36 @@
 {% block title %}{{ recipe }}{% endblock %}
 
 {% block content %}
-<div class="container d-flex justify-content-center">
-    <div class="card font-weight-normal">
-        <div class="card-header nhs-blue-text">
-            {{ recipes }}
+
+<main>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for recipes in recipes %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{{recipes.image.url}}" />
+            <div class="card-body">
+              <p>{{recipes.title}}</p>
+              <p class="card-text">{{recipes.content}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="{{recipes.get_absolute_url}}" role="button" class="btn btn-primary btn-sm">View</a
+                  >
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item pl-3">
-            <strong>Recipes Information:</strong><br>
-          </li>
-                 </ul>
+        {% endfor %}
+      </div>
     </div>
-</div>
-{% endblock %} 
+  </div>
+  </main>
+
+{% endblock content %} 
   
 
 

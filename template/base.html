@@ -20,8 +20,6 @@
 
             <img src="media\images\logo1.png" width="70" height="100" class="me-2" viewBox="0 0 118 94" role="img">
 
-            <title>Fresher</title>
-
 
             </svg>
             <span class="fs-4">Fresher</span>
@@ -30,8 +28,8 @@
 
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'Fresher:aboutus' %}">About Us</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'Fresher:recipe_list' %}">Recipe</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
-            <a class="py-2 text-dark text-decoration-none" href="#">Recipe</a>
         </nav>
     </header>
     {% block content %}{% endblock content %}
