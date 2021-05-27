@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Post
+from .models import Post, Recipes
 
 def home(request):
     data = Post.objects.all()
@@ -12,5 +12,9 @@ def single(request, slug):
 
 def aboutus(request):
     return render(request, "aboutus.html", {})
+
+def recipes_list(request, id):
+    recipes = Recipes.objects.get(id = id)
+    return render(request, "recipes.html", {"recipes": recipes})    
 
     

@@ -9,4 +9,5 @@ urlpatterns = [
     path('', views.home, name="homepage"),
     path('single/<slug:slug>', views.single, name="single"),
     path('aboutus/', views.aboutus, name="aboutus"),
+    path('recipes/<int:id>/', views.recipes_list, name="recipes_list"),
 ]
