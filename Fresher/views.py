@@ -13,8 +13,8 @@ def single(request, slug):
 def aboutus(request):
     return render(request, "aboutus.html", {})
 
-def recipes_list(request, id):
-    recipes = Recipes.objects.get(id = id)
-    return render(request, "recipes.html", {"recipes": recipes})    
+def recipes_list(request):
+    recipes = Recipes.objects.all()
+    return render(request, "recipes.html", {"recipes": recipes})      
 
     

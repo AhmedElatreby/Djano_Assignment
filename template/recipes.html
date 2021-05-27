@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ recipes }}{% endblock %}
+{% block title %}{{ recipe }}{% endblock %}
 
 {% block content %}
 <div class="container d-flex justify-content-center">
@@ -10,7 +10,7 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item pl-3">
-            <strong>Therapist Information:</strong><br>
+            <strong>Recipes Information:</strong><br>
           </li>
                  </ul>
     </div>
@@ -29,13 +29,3 @@
 
 
 
-
-
-{% block content %}
-
-<div class="container pt-5">
-<h1>{{recipes.title}}<h1/>
-<p>{{recipes.content}}</p>
-</div>
-
-{% endblock content %}
